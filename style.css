@@ -2,21 +2,109 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.bg-image {
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100vh;
-  background-image: url("https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg");
+  height: 100%;
+  z-index: -1;
+  background-image: linear-gradient(
+      115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)
+    ),
+    url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
   background-size: cover;
 }
 
-.img-overlay {
+.header {
+  width: 720px;
+  height: 72px;
+  margin-top: 50px;
+  text-align: center;
+  margin-left: 22%;
+  color: white;
+}
+
+#title {
+  font-size: 2em;
+  font-weight: 400;
+}
+
+#description {
+  font-size: 1.125rem;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.form-container {
+  height: 100em;
+  width: 45em;
+  background-color: rgba(27, 27, 50, 0.8);
+  margin-top: 50px;
+  margin-left: 22%;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 20px;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+input,
+select {
   width: 100%;
-  height: 100vh;
-  background: linear-gradient(
-    115deg,
-    rgba(58, 58, 158, 0.8),
-    rgba(136, 136, 206, 0.7)
-  );
+  height: 40px;
+  padding: 5px;
+  font-size: 18px;
+  color: #495057;
+}
+
+input[type="radio"] {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+}
+
+#que {
+  padding-top: 25px;
+}
+
+textarea {
+  width: 100%;
+  height: 130px;
+  font-size: 18px;
+  padding: 10px;
+}
+
+input[type="submit"] {
+  background-color: #37af65;
+  color: white;
+  margin-top: 30px;
+  height: 50px;
+  cursor: pointer;
 }
